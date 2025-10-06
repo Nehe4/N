@@ -1,55 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Test Fullscreen Ad</title>
-  <style>
-    html,body { height:100%; margin:0; background:#ffffff; }
-    #ad-wrap {
-      width:100vw;
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-sizing:border-box;
-    }
-    /* ensure ad container fills screen */
-    .adsbygoogle { width:100vw !important; height:100vh !important; display:block !important; }
-    /* small fallback message centered */
-    #fallback { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:Arial,Helvetica,sans-serif; color:#444; }
-  </style>
-
-  <!-- official Google test client (safe) -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Test Ad</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3940256099942544"
           crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="ad-wrap">
-    <!-- Fullscreen test ad: uses Google's universal test publisher ID -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-3940256099942544"
-         data-ad-slot="1033173712"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
-  <!-- Optional fallback, visible briefly if ad fails to load -->
-  <div id="fallback" style="display:none;">Ad not available — loading app…</div>
-
+  <ins class="adsbygoogle"
+       style="display:block; width:300px; height:250px; margin:auto; margin-top:50px;"
+       data-ad-client="ca-pub-3940256099942544"
+       data-ad-slot="2005653934"></ins>
   <script>
-    // show fallback after 6s if ad not loaded (helps UX)
-    setTimeout(() => {
-      const ad = document.querySelector('.adsbygoogle');
-      const fallback = document.getElementById('fallback');
-      if (!ad || ad.offsetHeight === 0) {
-        fallback.style.display = 'flex';
-      }
-    }, 6000);
+       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
+  <p style="text-align:center;">If you see a "Test Ad" banner, integration works ✅</p>
 </body>
 </html>
