@@ -1,59 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CALCULATOR</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Test Fullscreen Ad</title>
+  <style>
+    html,body { height:100%; margin:0; background:#ffffff; }
+    #ad-wrap {
+      width:100vw;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-sizing:border-box;
+    }
+    /* ensure ad container fills screen */
+    .adsbygoogle { width:100vw !important; height:100vh !important; display:block !important; }
+    /* small fallback message centered */
+    #fallback { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:Arial,Helvetica,sans-serif; color:#444; }
+  </style>
+
+  <!-- official Google test client (safe) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3940256099942544"
+          crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>NEHE'S CALCULATOR</h1>
-    <div class="con">
-       <div class="screenBorder"> 
-  <input class="input input2" readonly type="text">
- </div>
- 
- <div>
-  <button class="deco" onclick="button('7')">7</button>
-  
-  <button class="deco" onclick="button('8')">8</button>
-  
-  <button class="deco" onclick="button('9')">9</button>
-  
-  <button class="sign" onclick="button('+')">+</button>
-  
-  <button class="deco" onclick="button('6')">6</button>
-  
-  <button class="deco" onclick="button('5')">5</button>
-  
-  <button class="deco" onclick="button('4')">4</button>
-  
-  <button class="sign" onclick="button('-')">-</button>
-  
-  <button class="deco" onclick="button('3')">3</button>
-  
-  <button class="deco" onclick="button('2')">2</button>
-  
-  <button class="deco" onclick="button('1')">1</button>
-  
-  <button class="sign" onclick="button('/')">/</button>
-  
-  <button class="deco" onclick="button('0')">0</button>
-
-<button class="sign" onclick="button('.')">.</button>
-  
-  <button class="sign" onclick="  cal()">=</button>
-  
-  <button class="sign" onclick="button('*')">*</button>
-     
-  <button class="sign" onclick="backspace()">D</button>
-     
-  <button class="sign" onclick="Eraze()">C</button>
-  </div>  
+  <div id="ad-wrap">
+    <!-- Fullscreen test ad: uses Google's universal test publisher ID -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-3940256099942544"
+         data-ad-slot="1033173712"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </div>
 
-<script async="async" data-cfasync="false" src="//pl26924372.profitableratecpm.com/8671f4d243e9305c2c3a9321abf5c573/invoke.js"></script>
-<div id="container-8671f4d243e9305c2c3a9321abf5c573"></div>
-  <script src="script.js"></script>
+  <!-- Optional fallback, visible briefly if ad fails to load -->
+  <div id="fallback" style="display:none;">Ad not available — loading app…</div>
+
+  <script>
+    // show fallback after 6s if ad not loaded (helps UX)
+    setTimeout(() => {
+      const ad = document.querySelector('.adsbygoogle');
+      const fallback = document.getElementById('fallback');
+      if (!ad || ad.offsetHeight === 0) {
+        fallback.style.display = 'flex';
+      }
+    }, 6000);
+  </script>
 </body>
 </html>
-
